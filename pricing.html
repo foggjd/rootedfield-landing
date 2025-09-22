@@ -10,80 +10,75 @@
           --forest-green: #1e3a2e;
           --sage-green: #87a96b;
           --moss-green: #4a5d23;
-          --earth-brown: #8b5a3c;
-          --warm-white: #fafaf9;
           --stone-gray: #78716c;
         }
-        .bg-gradient-custom { background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%); }
         .text-forest-green { color: var(--forest-green); }
         .text-stone-gray { color: var(--stone-gray); }
-        .bg-gradient-green-btn { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
-        .border-sage-green { border-color: var(--sage-green); }
-        .text-sage-green { color: var(--sage-green); }
-        .custom-btn { transition: all 0.2s ease-in-out; }
-        .custom-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .feature-list li { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .bg-gradient-green { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
     </style>
 </head>
-<body class="bg-gradient-custom min-h-screen">
+<body class="bg-gray-50">
 
-    <!-- Header - CORRECTED -->
-    <header class="border-b bg-white sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href__="index.html" class="flex items-center">
-                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png" alt="RootedField Logo" class="h-8 w-auto">
+    <!-- Simple Header -->
+    <header class="bg-white border-b border-gray-200 py-4">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href__="index.html">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png" alt="RootedField Logo" class="h-8">
             </a>
-            <div class="flex items-center gap-4">
-                <a href__="index.html" class="px-4 py-2 text-sm font-medium text-stone-gray hover:bg-gray-100 rounded-md">Home</a>
-                <a href__="https://app.rootedfield.com" class="px-4 py-2 text-sm font-medium border border-gray-300 text-stone-gray hover:bg-gray-50 rounded-md">Sign In</a>
+            <div class="flex gap-4">
+                <a href__="index.html" class="px-4 py-2 text-stone-gray hover:bg-gray-100 rounded">Home</a>
+                <a href__="https://app.rootedfield.com" class="px-4 py-2 border border-gray-300 text-stone-gray hover:bg-gray-50 rounded">Sign In</a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <div class="p-6 space-y-8">
-        <div class="max-w-5xl mx-auto">
+    <div class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold mb-2 text-forest-green">Choose Your Plan</h1>
+                <h1 class="text-4xl font-bold mb-4 text-forest-green">Choose Your Plan</h1>
                 <p class="text-lg text-stone-gray">Unlock the full potential of your orchard with our Pro plan.</p>
             </div>
+
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Free Plan -->
-                <div class="bg-white rounded-xl shadow-lg border-0 flex flex-col transition-all duration-300 card-hover">
-                    <div class="p-6 border-b border-gray-100"><h2 class="text-2xl font-bold text-forest-green">Free</h2><p class="text-stone-gray mt-1">Perfect for hobbyists and small gardens.</p></div>
-                    <div class="flex-grow p-6 space-y-4">
-                        <p class="text-3xl font-bold text-forest-green">$0<span class="text-lg font-normal text-gray-500">/month</span></p>
-                        <ul class="space-y-3 feature-list">
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Track up to 5 trees</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Basic health & watering logs</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Limited activity history</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Community support</span></li>
-                        </ul>
-                    </div>
-                    <div class="p-6"><a href__="https://app.rootedfield.com" class="block w-full text-center px-6 py-3 rounded-md border border-gray-300 text-stone-gray font-semibold hover:bg-gray-50 custom-btn">Get Started</a></div>
+                <div class="bg-white p-8 border border-gray-200 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2 text-forest-green">Free</h2>
+                    <p class="text-stone-gray mb-6">Perfect for hobbyists and small gardens.</p>
+                    <p class="text-3xl font-bold mb-6 text-forest-green">$0<span class="text-lg font-normal text-gray-500">/month</span></p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Track up to 5 trees</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Basic health & watering logs</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Limited activity history</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Community support</li>
+                    </ul>
+                    
+                    <a href__="https://app.rootedfield.com" class="block w-full text-center py-3 border border-gray-300 text-stone-gray hover:bg-gray-50 rounded font-semibold">Get Started</a>
                 </div>
+
                 <!-- Pro Plan -->
-                <div class="bg-white rounded-xl shadow-2xl flex flex-col transition-all duration-300 card-hover border-2 border-sage-green">
-                    <div class="p-6 border-b border-gray-100">
-                        <div class="flex justify-between items-center"><h2 class="text-2xl font-bold text-forest-green">Pro</h2><div class="text-sm font-semibold text-white px-3 py-1 rounded-full bg-sage-green">Recommended</div></div>
-                        <p class="text-stone-gray mt-1">For serious growers and commercial orchards.</p>
-                    </div>
-                    <div class="flex-grow p-6 space-y-4">
-                        <p class="text-3xl font-bold text-forest-green">$10<span class="text-lg font-normal text-gray-500">/month</span></p>
-                        <ul class="space-y-3 feature-list">
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Track unlimited trees</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Advanced health diagnostics</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Automated watering schedules & alerts</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Full activity history & reporting</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>GPS mapping for all trees</span></li>
-                            <li><svg class="w-5 h-5 text-sage-green" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg><span>Priority email support</span></li>
-                        </ul>
-                    </div>
-                    <div class="p-6"><a href__="https://buy.stripe.com/fZu4gz7OHbgk2vLdgi5EY00" class="block w-full text-center px-6 py-3 rounded-md text-white font-semibold shadow-lg bg-gradient-green-btn custom-btn">Upgrade to Pro</a></div>
+                <div class="bg-white p-8 border-2 border-green-500 rounded-lg relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Recommended</div>
+                    
+                    <h2 class="text-2xl font-bold mb-2 text-forest-green">Pro</h2>
+                    <p class="text-stone-gray mb-6">For serious growers and commercial orchards.</p>
+                    <p class="text-3xl font-bold mb-6 text-forest-green">$10<span class="text-lg font-normal text-gray-500">/month</span></p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Track unlimited trees</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Advanced health diagnostics</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Automated watering schedules & alerts</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Full activity history & reporting</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> GPS mapping for all trees</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Priority email support</li>
+                    </ul>
+                    
+                    <a href__="https://buy.stripe.com/fZu4gz7OHbgk2vLdgi5EY00" class="block w-full text-center py-3 bg-gradient-green text-white rounded font-semibold">Upgrade to Pro</a>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
