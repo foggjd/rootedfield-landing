@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,128 +10,168 @@
           --forest-green: #1e3a2e;
           --sage-green: #87a96b;
           --moss-green: #4a5d23;
-          --earth-brown: #8b5a3c;
-          --warm-white: #fafaf9;
           --stone-gray: #78716c;
         }
-        .bg-gradient-custom { background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%); }
         .text-forest-green { color: var(--forest-green); }
         .text-sage-green { color: var(--sage-green); }
         .text-stone-gray { color: var(--stone-gray); }
         .bg-sage-green { background-color: var(--sage-green); }
-        .bg-gradient-green-btn { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
-        .fill-sage-green { fill: var(--sage-green); }
-        .custom-btn { transition: all 0.2s ease-in-out; }
-        .custom-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .custom-input:focus { border-color: var(--sage-green); box-shadow: 0 0 0 2px rgba(135, 169, 107, 0.4); outline: none; }
+        .bg-gradient-green { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
     </style>
 </head>
-<body class="bg-gradient-custom text-stone-gray">
+<body class="bg-gray-50">
 
-    <!-- Header - CORRECTED -->
-    <header class="border-b bg-white sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href__="index.html" class="flex items-center">
-                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png" alt="RootedField Logo" class="h-8 w-auto">
+    <!-- Simple Header - No complex CSS -->
+    <header class="bg-white border-b border-gray-200 py-4">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href__="index.html">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png" alt="RootedField Logo" class="h-8">
             </a>
-            <div class="flex items-center gap-2 sm:gap-4">
-                <a href__="pricing.html" class="px-4 py-2 text-sm font-medium text-stone-gray hover:bg-gray-100 rounded-md">Pricing</a>
-                <a href__="https://app.rootedfield.com" class="px-4 py-2 text-sm font-medium border border-gray-300 text-stone-gray hover:bg-gray-50 rounded-md">Sign In</a>
+            <div class="flex gap-4">
+                <a href__="pricing.html" class="px-4 py-2 text-stone-gray hover:bg-gray-100 rounded">Pricing</a>
+                <a href__="https://app.rootedfield.com" class="px-4 py-2 border border-gray-300 text-stone-gray hover:bg-gray-50 rounded">Sign In</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="py-20 px-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <div class="inline-flex items-center bg-sage-green text-white text-sm font-medium px-4 py-1 rounded-full mb-6">
+    <section class="py-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-6">
                 🌱 Free 14-day trial • No credit card required
             </div>
-            <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight text-forest-green">
-                Grow Better<br>
-                <span class="text-sage-green">Orchards</span>
+            
+            <h1 class="text-5xl font-bold mb-6 text-forest-green">
+                Grow Better <span class="text-sage-green">Orchards</span>
             </h1>
-            <p class="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto text-stone-gray">
+            
+            <p class="text-xl mb-12 text-stone-gray max-w-2xl mx-auto">
                 The complete tree management platform for orchardists, farmers, and fruit tree enthusiasts. 
-                Track health, schedule care, and maximize your harvest with intelligent insights.
+                Track health, schedule care, and maximize your harvest.
             </p>
 
-            <div id="form-container" class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-                <input id="email-input" type="email" placeholder="Enter your email" class="flex-1 w-full sm:w-auto h-12 px-4 border border-gray-300 rounded-md custom-input">
-                <button id="trial-button" class="h-12 w-full sm:w-auto px-8 shadow-lg text-white rounded-md bg-gradient-green-btn custom-btn">Start Free Trial</button>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input id="email" type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded">
+                <button onclick="startTrial()" class="px-8 py-3 bg-gradient-green text-white rounded font-semibold">Start Free Trial</button>
             </div>
+            
             <p class="text-sm mt-4 text-stone-gray">Join 2,500+ growers who trust RootedField</p>
         </div>
     </section>
 
-    <!-- ... (rest of the file is unchanged) ... -->
+    <!-- Features -->
     <section class="py-20 px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-6 text-forest-green">Everything you need to manage your orchard</h2>
-            <p class="text-xl max-w-3xl mx-auto text-stone-gray">From planting to harvest, RootedField provides the tools and insights you need to grow healthy, productive fruit trees.</p>
-          </div>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow rounded-xl"><div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(135, 169, 107, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--sage-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 3 3 3-3"/><path d="M12 3v18"/><path d="M9 11h.01"/><path d="M15 11h.01"/><path d="M10 17h.01"/><path d="M14 17h.01"/></svg></div><h3 class="text-xl font-semibold mb-3 text-forest-green">Tree Management</h3><p class="text-stone-gray">Track unlimited trees with detailed health monitoring and growth records</p></div>
-            <div class="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow rounded-xl"><div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(135, 169, 107, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--sage-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5-2 1.6-3 3.5-3 5.5a7 7 0 0 0 7 7z"/><path d="M12 15a3 3 0 0 0 3-3c0-.8-.3-1.6-1-2.2"/></svg></div><h3 class="text-xl font-semibold mb-3 text-forest-green">Smart Watering</h3><p class="text-stone-gray">Automated watering schedules with weather-based adjustments and alerts</p></div>
-            <div class="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow rounded-xl"><div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(135, 169, 107, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--sage-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div><h3 class="text-xl font-semibold mb-3 text-forest-green">Activity Tracking</h3><p class="text-stone-gray">Log and schedule pruning, fertilizing, harvests, and maintenance activities</p></div>
-            <div class="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow rounded-xl"><div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(135, 169, 107, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--sage-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><h3 class="text-xl font-semibold mb-3 text-forest-green">GPS Mapping</h3><p class="text-stone-gray">Interactive maps showing exact tree locations and orchard layout</p></div>
-            <div class="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow rounded-xl"><div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(135, 169, 107, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--sage-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg></div><h3 class="text-xl font-semibold mb-3 text-forest-green">Analytics & Reports</h3><p class="text-stone-gray">Comprehensive insights into tree health, productivity, and ROI</p></div>
-            <div class="p-6 border-0 shadow-lg hover:shadow-xl transition-shadow rounded-xl"><div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(135, 169, 107, 0.1);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--sage-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 class="text-xl font-semibold mb-3 text-forest-green">Team Collaboration</h3><p class="text-stone-gray">Share orchards with team members and manage access permissions</p></div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="py-20 px-6 bg-gradient-custom">
-        <div class="max-w-6xl mx-auto"><div class="text-center mb-16"><h2 class="text-4xl font-bold mb-6 text-forest-green">Loved by growers everywhere</h2></div>
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-6 border-0 shadow-lg rounded-xl bg-white"><div class="flex mb-4"><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div><p class="mb-4 italic text-stone-gray">"RootedField transformed how we manage our 500-tree apple orchard. The automated reminders alone saved us countless hours."</p><div><p class="font-semibold text-forest-green">Sarah Chen</p><p class="text-sm text-stone-gray">Commercial Orchard Owner</p></div></div>
-            <div class="p-6 border-0 shadow-lg rounded-xl bg-white"><div class="flex mb-4"><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div><p class="mb-4 italic text-stone-gray">"Finally, an app that understands fruit trees! The health tracking helped me save my struggling peach tree."</p><div><p class="font-semibold text-forest-green">Mike Rodriguez</p><p class="text-sm text-stone-gray">Backyard Gardener</p></div></div>
-            <div class="p-6 border-0 shadow-lg rounded-xl bg-white"><div class="flex mb-4"><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5 fill-sage-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div><p class="mb-4 italic text-stone-gray">"The mapping feature is incredible. We can track which varieties perform best in different locations."</p><div><p class="font-semibold text-forest-green">Jennifer Park</p><p class="text-sm text-stone-gray">Organic Farm Manager</p></div></div>
-          </div>
-        </div>
-      </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 px-6 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-6 text-forest-green">Ready to transform your orchard?</h2>
-            <p class="text-xl mb-8 text-stone-gray">Start your free 14-day trial today. No credit card required.</p>
-            <div id="form-container-2" class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-                <input id="email-input-2" type="email" placeholder="Enter your email" class="flex-1 w-full sm:w-auto h-12 px-4 border border-gray-300 rounded-md custom-input">
-                <button id="trial-button-2" class="h-12 w-full sm:w-auto px-8 shadow-lg text-white rounded-md bg-gradient-green-btn custom-btn">Start Free Trial</button>
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 text-forest-green">Everything you need to manage your orchard</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">🌳</div>
+                    <h3 class="text-xl font-semibold mb-3 text-forest-green">Tree Management</h3>
+                    <p class="text-stone-gray">Track unlimited trees with detailed health monitoring and growth records</p>
+                </div>
+                
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">💧</div>
+                    <h3 class="text-xl font-semibold mb-3 text-forest-green">Smart Watering</h3>
+                    <p class="text-stone-gray">Automated watering schedules with weather-based adjustments and alerts</p>
+                </div>
+                
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">📅</div>
+                    <h3 class="text-xl font-semibold mb-3 text-forest-green">Activity Tracking</h3>
+                    <p class="text-stone-gray">Log and schedule pruning, fertilizing, harvests, and maintenance activities</p>
+                </div>
+                
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">📍</div>
+                    <h3 class="text-xl font-semibold mb-3 text-forest-green">GPS Mapping</h3>
+                    <p class="text-stone-gray">Interactive maps showing exact tree locations and orchard layout</p>
+                </div>
+                
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">📊</div>
+                    <h3 class="text-xl font-semibold mb-3 text-forest-green">Analytics & Reports</h3>
+                    <p class="text-stone-gray">Comprehensive insights into tree health, productivity, and ROI</p>
+                </div>
+                
+                <div class="p-6 border border-gray-200 rounded-lg">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">👥</div>
+                    <h3 class="text-xl font-semibold mb-3 text-forest-green">Team Collaboration</h3>
+                    <p class="text-stone-gray">Share orchards with team members and manage access permissions</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer - CORRECTED -->
-    <footer class="border-t bg-gray-50 py-12 px-6">
+    <!-- Testimonials -->
+    <section class="py-20 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-4 md:mb-0">
-                    <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png" alt="RootedField Logo" class="h-7 w-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 text-forest-green">Loved by growers everywhere</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white border border-gray-200 rounded-lg">
+                    <div class="flex mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-4 italic text-stone-gray">"RootedField transformed how we manage our 500-tree apple orchard. The automated reminders alone saved us countless hours."</p>
+                    <div><p class="font-semibold text-forest-green">Sarah Chen</p><p class="text-sm text-stone-gray">Commercial Orchard Owner</p></div>
                 </div>
-                <div class="flex items-center gap-6 text-sm">
-                    <a href__="pricing.html" class="text-stone-gray hover:underline">Pricing</a>
-                    <span class="text-stone-gray">© 2024 RootedField. All rights reserved.</span>
+                
+                <div class="p-6 bg-white border border-gray-200 rounded-lg">
+                    <div class="flex mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-4 italic text-stone-gray">"Finally, an app that understands fruit trees! The health tracking helped me save my struggling peach tree."</p>
+                    <div><p class="font-semibold text-forest-green">Mike Rodriguez</p><p class="text-sm text-stone-gray">Backyard Gardener</p></div>
                 </div>
+                
+                <div class="p-6 bg-white border border-gray-200 rounded-lg">
+                    <div class="flex mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-4 italic text-stone-gray">"The mapping feature is incredible. We can track which varieties perform best in different locations."</p>
+                    <div><p class="font-semibold text-forest-green">Jennifer Park</p><p class="text-sm text-stone-gray">Organic Farm Manager</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-6 bg-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-forest-green">Ready to transform your orchard?</h2>
+            <p class="text-xl mb-8 text-stone-gray">Start your free 14-day trial today. No credit card required.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input id="email2" type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded">
+                <button onclick="startTrial2()" class="px-8 py-3 bg-gradient-green text-white rounded font-semibold">Start Free Trial</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t bg-gray-100 py-8 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png" alt="RootedField Logo" class="h-6 mb-4 md:mb-0">
+            <div class="flex items-center gap-6 text-sm">
+                <a href__="pricing.html" class="text-stone-gray hover:underline">Pricing</a>
+                <span class="text-stone-gray">© 2024 RootedField. All rights reserved.</span>
             </div>
         </div>
     </footer>
 
     <script>
-        function handleTrialRedirect(emailInputId) {
-            const email = document.getElementById(emailInputId).value;
+        function startTrial() {
+            const email = document.getElementById('email').value;
             if (!email) {
                 alert('Please enter your email address');
                 return;
             }
-            const encodedEmail = encodeURIComponent(email);
-            window.location.href = `https://app.rootedfield.com/Dashboard?email=${encodedEmail}&trial=true`;
+            window.location.href = `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
         }
 
-        document.getElementById('trial-button').addEventListener('click', () => handleTrialRedirect('email-input'));
-        document.getElementById('trial-button-2').addEventListener('click', () => handleTrialRedirect('email-input-2'));
+        function startTrial2() {
+            const email = document.getElementById('email2').value;
+            if (!email) {
+                alert('Please enter your email address');
+                return;
+            }
+            window.location.href = `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
+        }
     </script>
 </body>
 </html>
