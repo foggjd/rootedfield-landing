@@ -348,9 +348,10 @@
                     schedule care, manage irrigation, map tree locations, and organize orchard operations.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                    <input id="email" type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded">
-                    <button onclick="startTrial()" class="px-8 py-3 bg-gradient-green text-white rounded font-semibold">Start Free Trial</button>
+                <div class="flex justify-center">
+                    <button onclick="startTrial('hero')" class="px-8 py-3 bg-gradient-green text-white rounded font-semibold">
+                        Start Free Trial
+                    </button>
                 </div>
 
                 <p class="text-sm mt-4 text-stone-gray">Start organizing your orchard today</p>
@@ -464,9 +465,10 @@
                 <h2 class="text-3xl font-bold mb-6 text-forest-green">Ready to transform your orchard?</h2>
                 <p class="text-xl mb-8 text-stone-gray">Start your free 14-day trial today. No credit card required.</p>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                    <input id="email2" type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded">
-                    <button onclick="startTrial2()" class="px-8 py-3 bg-gradient-green text-white rounded font-semibold">Start Free Trial</button>
+                <div class="flex justify-center">
+                    <button onclick="startTrial('final_cta')" class="px-8 py-3 bg-gradient-green text-white rounded font-semibold">
+                        Start Free Trial
+                    </button>
                 </div>
             </div>
         </section>
@@ -534,42 +536,15 @@
     </div>
 
     <script>
-        function startTrial() {
-            const email = document.getElementById('email').value;
-
-            if (!email) {
-                alert('Please enter your email address');
-                return;
-            }
-
+        function startTrial(ctaLocation) {
             trackEvent('start_trial_click', {
                 page_path: window.location.pathname,
                 page_location: window.location.href,
                 page_title: document.title,
-                cta_location: 'hero'
+                cta_location: ctaLocation
             });
 
-            window.location.href =
-                `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
-        }
-
-        function startTrial2() {
-            const email = document.getElementById('email2').value;
-
-            if (!email) {
-                alert('Please enter your email address');
-                return;
-            }
-
-            trackEvent('start_trial_click', {
-                page_path: window.location.pathname,
-                page_location: window.location.href,
-                page_title: document.title,
-                cta_location: 'final_cta'
-            });
-
-            window.location.href =
-                `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
+            window.location.href = 'https://app.rootedfield.com/signup?trial=true';
         }
     </script>
 </body>
