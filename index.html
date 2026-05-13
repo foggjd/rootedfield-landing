@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>RootedField | Orchard Management Software for Tree Tracking, Irrigation & Farm Operations</title>
-<!-- Favicons -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#87a96b">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-
-<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-
-<meta name="theme-color" content="#87a96b">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
     <meta
         name="description"
         content="RootedField is orchard management software for tracking trees, managing irrigation schedules, logging orchard activities, mapping tree locations, and organizing farm operations."
@@ -50,16 +48,31 @@
 
     <style>
         :root {
-          --forest-green: #1e3a2e;
-          --sage-green: #87a96b;
-          --moss-green: #4a5d23;
-          --stone-gray: #78716c;
+            --forest-green: #1e3a2e;
+            --sage-green: #87a96b;
+            --moss-green: #4a5d23;
+            --stone-gray: #78716c;
         }
-        .text-forest-green { color: var(--forest-green); }
-        .text-sage-green { color: var(--sage-green); }
-        .text-stone-gray { color: var(--stone-gray); }
-        .bg-sage-green { background-color: var(--sage-green); }
-        .bg-gradient-green { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
+
+        .text-forest-green {
+            color: var(--forest-green);
+        }
+
+        .text-sage-green {
+            color: var(--sage-green);
+        }
+
+        .text-stone-gray {
+            color: var(--stone-gray);
+        }
+
+        .bg-sage-green {
+            background-color: var(--sage-green);
+        }
+
+        .bg-gradient-green {
+            background: linear-gradient(135deg, var(--sage-green), var(--moss-green));
+        }
     </style>
 
     <script type="application/ld+json">
@@ -135,15 +148,169 @@
         ]
     }
     </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL48W4WSTP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-RL48W4WSTP');
-</script>
+    <!-- Google Analytics + Microsoft Clarity Consent Mode -->
+    <script>
+        const GA_MEASUREMENT_ID = 'G-RL48W4WSTP';
+        const CLARITY_PROJECT_ID = 'wq7iy6zgoy';
+        const CONSENT_STORAGE_KEY = 'rootedfield_cookie_consent';
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            window.dataLayer.push(arguments);
+        }
+
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
+
+        function loadGoogleAnalytics() {
+            if (window.rootedFieldGaLoaded) {
+                return;
+            }
+
+            window.rootedFieldGaLoaded = true;
+
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+            document.head.appendChild(script);
+
+            gtag('js', new Date());
+
+            gtag('config', GA_MEASUREMENT_ID, {
+                page_path: window.location.pathname,
+                page_location: window.location.href,
+                page_title: document.title
+            });
+        }
+
+        function loadMicrosoftClarity() {
+            if (window.rootedFieldClarityLoaded) {
+                return;
+            }
+
+            window.rootedFieldClarityLoaded = true;
+
+            (function(c, l, a, r, i, t, y) {
+                c[a] = c[a] || function() {
+                    (c[a].q = c[a].q || []).push(arguments);
+                };
+                t = l.createElement(r);
+                t.async = 1;
+                t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+        }
+
+        function acceptAnalytics() {
+            localStorage.setItem(CONSENT_STORAGE_KEY, 'analytics');
+
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+            });
+
+            loadGoogleAnalytics();
+            loadMicrosoftClarity();
+            hideCookieBanner();
+        }
+
+        function acceptNecessaryOnly() {
+            localStorage.setItem(CONSENT_STORAGE_KEY, 'necessary');
+
+            gtag('consent', 'update', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+            });
+
+            hideCookieBanner();
+        }
+
+        function rejectCookies() {
+            localStorage.setItem(CONSENT_STORAGE_KEY, 'rejected');
+
+            gtag('consent', 'update', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+            });
+
+            hideCookieBanner();
+        }
+
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookie-consent-banner');
+
+            if (banner) {
+                banner.style.display = 'none';
+            }
+        }
+
+        function showCookieBanner() {
+            const banner = document.getElementById('cookie-consent-banner');
+
+            if (banner) {
+                banner.style.display = 'block';
+            }
+        }
+
+        function hasAnalyticsConsent() {
+            return localStorage.getItem(CONSENT_STORAGE_KEY) === 'analytics';
+        }
+
+        function trackEvent(eventName, params = {}) {
+            if (
+                hasAnalyticsConsent() &&
+                typeof gtag === 'function'
+            ) {
+                gtag('event', eventName, params);
+            }
+
+            if (
+                hasAnalyticsConsent() &&
+                typeof clarity === 'function'
+            ) {
+                clarity('event', eventName);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedConsent = localStorage.getItem(CONSENT_STORAGE_KEY);
+
+            if (savedConsent === 'analytics') {
+                gtag('consent', 'update', {
+                    analytics_storage: 'granted',
+                    ad_storage: 'denied',
+                    ad_user_data: 'denied',
+                    ad_personalization: 'denied'
+                });
+
+                loadGoogleAnalytics();
+                loadMicrosoftClarity();
+                return;
+            }
+
+            if (
+                savedConsent === 'necessary' ||
+                savedConsent === 'rejected'
+            ) {
+                return;
+            }
+
+            showCookieBanner();
+        });
+    </script>
 </head>
 
 <body class="bg-gray-50">
@@ -324,23 +491,85 @@
         </div>
     </footer>
 
+    <div
+        id="cookie-consent-banner"
+        style="display: none;"
+        class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white px-6 py-5 shadow-lg"
+    >
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div class="max-w-3xl">
+                <h2 class="text-lg font-semibold text-forest-green">
+                    Cookie Preferences
+                </h2>
+
+                <p class="mt-1 text-sm text-stone-gray">
+                    RootedField uses necessary cookies to operate the site.
+                    With your permission, we also use analytics cookies to understand site usage and improve the platform.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2 sm:flex-row">
+                <button
+                    onclick="acceptAnalytics()"
+                    class="rounded bg-gradient-green px-4 py-2 text-sm font-semibold text-white"
+                >
+                    Accept
+                </button>
+
+                <button
+                    onclick="acceptNecessaryOnly()"
+                    class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50"
+                >
+                    Necessary Only
+                </button>
+
+                <button
+                    onclick="rejectCookies()"
+                    class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50"
+                >
+                    Reject
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         function startTrial() {
             const email = document.getElementById('email').value;
+
             if (!email) {
                 alert('Please enter your email address');
                 return;
             }
-            window.location.href = `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
+
+            trackEvent('start_trial_click', {
+                page_path: window.location.pathname,
+                page_location: window.location.href,
+                page_title: document.title,
+                cta_location: 'hero'
+            });
+
+            window.location.href =
+                `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
         }
 
         function startTrial2() {
             const email = document.getElementById('email2').value;
+
             if (!email) {
                 alert('Please enter your email address');
                 return;
             }
-            window.location.href = `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
+
+            trackEvent('start_trial_click', {
+                page_path: window.location.pathname,
+                page_location: window.location.href,
+                page_title: document.title,
+                cta_location: 'final_cta'
+            });
+
+            window.location.href =
+                `https://app.rootedfield.com/Dashboard?email=${encodeURIComponent(email)}&trial=true`;
         }
     </script>
 </body>
