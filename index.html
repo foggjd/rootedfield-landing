@@ -58,12 +58,6 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-
-        @media (max-width: 1023px) {
-            .hero-bg {
-                background-position: 34% center;
-            }
-        }
     </style>
 
     <script type="application/ld+json">
@@ -296,46 +290,71 @@
                 >
             </a>
 
-            <div class="flex gap-4">
+            <nav class="flex gap-4">
                 <a href="pricing.html" class="px-4 py-2 text-stone-gray hover:bg-gray-100 rounded">Pricing</a>
-                <div class="flex gap-4">
                 <a href="https://rootedfield.featurebase.app/roadmap" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-stone-gray hover:bg-gray-100 rounded">Roadmap</a>
                 <a href="https://app.rootedfield.com" class="px-4 py-2 border border-gray-300 text-stone-gray hover:bg-gray-50 rounded">Sign In</a>
-            </div>
+            </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-bg relative min-h-[760px] overflow-hidden">
-            <div class="mx-auto grid min-h-[760px] max-w-7xl grid-cols-1 items-center gap-24 px-6 lg:grid-cols-2">
+        <section class="bg-white overflow-hidden">
+            <div class="lg:hidden px-6 pt-12 pb-16 text-center">
+                <img
+                    src="logo_only.png"
+                    alt="RootedField Logo"
+                    class="h-40 mx-auto mb-6"
+                >
 
-                <div class="hidden lg:block"></div>
+                <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-5">
+                    Free 14-day trial • No credit card required
+                </div>
 
-                <div class="relative z-10 flex flex-col items-center text-center lg:items-center lg:text-center">
-                    <img
-                        src="logo_only.png"
-                        alt="RootedField Logo"
-                        class="h-96 mb-8"
-                    >
+                <h1 class="text-4xl font-bold text-forest-green leading-tight mb-6">
+                    Track Every Tree. Manage Every Season.
+                </h1>
 
-                    <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-6">
-                        Free 14-day trial • No credit card required
+                <button
+                    onclick="startTrial('hero_mobile')"
+                    class="px-8 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg"
+                >
+                    Start Free Trial
+                </button>
+
+                <img
+                    src="hero-rootedfield.png"
+                    alt="RootedField shown on laptop and mobile devices in an orchard"
+                    class="mt-12 w-full max-w-xl mx-auto rounded-2xl shadow-lg"
+                >
+            </div>
+
+            <div class="hidden lg:block hero-bg relative min-h-[760px] overflow-hidden">
+                <div class="mx-auto grid min-h-[760px] max-w-7xl grid-cols-2 items-center gap-32 px-6">
+                    <div></div>
+
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <img
+                            src="logo_only.png"
+                            alt="RootedField Logo"
+                            class="h-80 mb-8"
+                        >
+
+                        <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-6">
+                            Free 14-day trial • No credit card required
+                        </div>
+
+                        <h1 class="text-5xl font-bold leading-tight text-white mb-8">
+                            Orchard Management Software for Better Tree Care
+                        </h1>
+
+                        <button
+                            onclick="startTrial('hero')"
+                            class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg"
+                        >
+                            Start Free Trial
+                        </button>
                     </div>
-
-                    <h1 class="text-4xl font-bold leading-tight text-white mb-6 md:text-5xl">
-                        Orchard Management Software for Better Tree Care
-                    </h1>
-
-            
-
-                    <button
-                        onclick="startTrial('hero')"
-                        class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg"
-                    >
-                        Start Free Trial
-                    </button>
-
-                
                 </div>
             </div>
         </section>
@@ -457,58 +476,27 @@
     </main>
 
     <footer class="border-t bg-gray-100 py-8 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col items-center gap-6">
+        <div class="max-w-6xl mx-auto flex flex-col items-center gap-6">
 
-        <img
-            src="footer-rootedfield.png"
-            alt="RootedField logo"
-            class="h-32"
-        >
-
-        <div class="flex flex-wrap items-center justify-center gap-5 text-sm">
-
-            <a
-                href="privacy.html"
-                class="text-stone-gray hover:underline"
+            <img
+                src="footer-rootedfield.png"
+                alt="RootedField logo"
+                class="h-32"
             >
-                Privacy Policy
-            </a>
 
-            <a
-                href="terms.html"
-                class="text-stone-gray hover:underline"
-            >
-                Terms of Service
-            </a>
-         <a
-                href="https://rootedfield.featurebase.app/changelog"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-stone-gray hover:underline"
-            >
-                Changelog
-            </a>
-            <a
-                href="sitemap.xml"
-                class="text-stone-gray hover:underline"
-            >
-                Sitemap
-            </a>
+            <div class="flex flex-wrap items-center justify-center gap-5 text-sm">
+                <a href="privacy.html" class="text-stone-gray hover:underline">Privacy Policy</a>
+                <a href="terms.html" class="text-stone-gray hover:underline">Terms of Service</a>
+                <a href="https://rootedfield.featurebase.app/changelog" target="_blank" rel="noopener noreferrer" class="text-stone-gray hover:underline">Changelog</a>
+                <a href="sitemap.xml" class="text-stone-gray hover:underline">Sitemap</a>
+                <a href="mailto:support@rootedfield.com" class="text-stone-gray hover:underline">Contact Us</a>
 
-            <a
-                href="mailto:support@rootedfield.com"
-                class="text-stone-gray hover:underline"
-            >
-                Contact Us
-            </a>
-
-            <span class="text-stone-gray">
-    © <script>document.write(new Date().getFullYear())</script> RootedField. All rights reserved.
-</span>
+                <span class="text-stone-gray">
+                    © <script>document.write(new Date().getFullYear())</script> RootedField. All rights reserved.
+                </span>
+            </div>
         </div>
-
-    </div>
-</footer>
+    </footer>
 
     <div
         id="cookie-consent-banner"
@@ -528,24 +516,15 @@
             </div>
 
             <div class="flex flex-col gap-2 sm:flex-row">
-                <button
-                    onclick="acceptAnalytics()"
-                    class="rounded bg-gradient-green px-4 py-2 text-sm font-semibold text-white"
-                >
+                <button onclick="acceptAnalytics()" class="rounded bg-gradient-green px-4 py-2 text-sm font-semibold text-white">
                     Accept
                 </button>
 
-                <button
-                    onclick="acceptNecessaryOnly()"
-                    class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50"
-                >
+                <button onclick="acceptNecessaryOnly()" class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50">
                     Necessary Only
                 </button>
 
-                <button
-                    onclick="rejectCookies()"
-                    class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50"
-                >
+                <button onclick="rejectCookies()" class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50">
                     Reject
                 </button>
             </div>
