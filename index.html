@@ -51,6 +51,19 @@
         .text-stone-gray { color: var(--stone-gray); }
         .bg-sage-green { background-color: var(--sage-green); }
         .bg-gradient-green { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
+
+        .hero-bg {
+            background-image: url('hero-rootedfield.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 1023px) {
+            .hero-bg {
+                background-position: 34% center;
+            }
+        }
     </style>
 
     <script type="application/ld+json">
@@ -291,27 +304,42 @@
     </header>
 
     <main>
-        <section class="relative overflow-hidden bg-white">
-            <img
-                src="hero-rootedfield.png"
-                alt="RootedField orchard management software shown on laptop and mobile devices"
-                class="w-full h-auto block"
-            >
+        <section class="hero-bg relative min-h-[760px] overflow-hidden">
+            <div class="mx-auto grid min-h-[760px] max-w-7xl grid-cols-1 items-center px-6 lg:grid-cols-2">
 
-            <div class="sr-only">
-                <h1>Orchard Management Software for Better Tree Care</h1>
-                <p>
-                    RootedField helps orchardists, farmers, and fruit tree growers track tree health,
-                    schedule care, manage irrigation, map tree locations, and organize orchard operations.
-                </p>
-            </div>
+                <div class="hidden lg:block"></div>
 
-            <div class="absolute inset-0">
-                <button
-                    onclick="startTrial('hero')"
-                    aria-label="Start Free Trial"
-                    class="absolute left-[69%] top-[65%] h-[7%] w-[17%] rounded-xl"
-                ></button>
+                <div class="relative z-10 flex flex-col items-center text-center lg:items-center lg:text-center">
+                    <img
+                        src="logo_only.png"
+                        alt="RootedField Logo"
+                        class="h-36 mb-8"
+                    >
+
+                    <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-6">
+                        Free 14-day trial • No credit card required
+                    </div>
+
+                    <h1 class="text-4xl font-bold leading-tight text-forest-green mb-6 md:text-5xl">
+                        Orchard Management Software for Better Tree Care
+                    </h1>
+
+                    <p class="text-lg text-stone-gray mb-8 max-w-xl md:text-xl">
+                        RootedField helps orchardists, farmers, and fruit tree growers track tree health,
+                        schedule care, manage irrigation, map tree locations, and organize orchard operations.
+                    </p>
+
+                    <button
+                        onclick="startTrial('hero')"
+                        class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg"
+                    >
+                        Start Free Trial
+                    </button>
+
+                    <p class="text-sm mt-4 text-stone-gray">
+                        No credit card required
+                    </p>
+                </div>
             </div>
         </section>
 
