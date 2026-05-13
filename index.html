@@ -7,7 +7,6 @@
 
     <title>RootedField | Orchard Management Software for Tree Tracking, Irrigation & Farm Operations</title>
 
-    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -24,25 +23,18 @@
     >
 
     <meta name="robots" content="index, follow">
-
     <link rel="canonical" href="https://rootedfield.com/">
 
     <meta property="og:title" content="RootedField | Orchard Management Software">
-    <meta
-        property="og:description"
-        content="Track trees, schedule care, manage irrigation, map orchards, and organize farm operations from one simple platform."
-    >
+    <meta property="og:description" content="Track trees, schedule care, manage irrigation, map orchards, and organize farm operations from one simple platform.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rootedfield.com/">
-    <meta property="og:image" content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png">
+    <meta property="og:image" content="https://rootedfield.com/hero-rootedfield.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="RootedField | Orchard Management Software">
-    <meta
-        name="twitter:description"
-        content="Orchard management software for tree tracking, irrigation planning, activity logging, GPS mapping, and farm operations."
-    >
-    <meta name="twitter:image" content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png">
+    <meta name="twitter:description" content="Orchard management software for tree tracking, irrigation planning, activity logging, GPS mapping, and farm operations.">
+    <meta name="twitter:image" content="https://rootedfield.com/hero-rootedfield.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -54,25 +46,11 @@
             --stone-gray: #78716c;
         }
 
-        .text-forest-green {
-            color: var(--forest-green);
-        }
-
-        .text-sage-green {
-            color: var(--sage-green);
-        }
-
-        .text-stone-gray {
-            color: var(--stone-gray);
-        }
-
-        .bg-sage-green {
-            background-color: var(--sage-green);
-        }
-
-        .bg-gradient-green {
-            background: linear-gradient(135deg, var(--sage-green), var(--moss-green));
-        }
+        .text-forest-green { color: var(--forest-green); }
+        .text-sage-green { color: var(--sage-green); }
+        .text-stone-gray { color: var(--stone-gray); }
+        .bg-sage-green { background-color: var(--sage-green); }
+        .bg-gradient-green { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
     </style>
 
     <script type="application/ld+json">
@@ -99,7 +77,7 @@
         "@type": "Organization",
         "name": "RootedField",
         "url": "https://rootedfield.com/",
-        "logo": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png",
+        "logo": "https://rootedfield.com/logo_only.png",
         "contactPoint": {
             "@type": "ContactPoint",
             "email": "support@rootedfield.com",
@@ -149,7 +127,6 @@
     }
     </script>
 
-    <!-- Google Analytics + Microsoft Clarity Consent Mode -->
     <script>
         const GA_MEASUREMENT_ID = 'G-RL48W4WSTP';
         const CLARITY_PROJECT_ID = 'wq7iy6zgoy';
@@ -169,9 +146,7 @@
         });
 
         function loadGoogleAnalytics() {
-            if (window.rootedFieldGaLoaded) {
-                return;
-            }
+            if (window.rootedFieldGaLoaded) return;
 
             window.rootedFieldGaLoaded = true;
 
@@ -190,9 +165,7 @@
         }
 
         function loadMicrosoftClarity() {
-            if (window.rootedFieldClarityLoaded) {
-                return;
-            }
+            if (window.rootedFieldClarityLoaded) return;
 
             window.rootedFieldClarityLoaded = true;
 
@@ -251,18 +224,12 @@
 
         function hideCookieBanner() {
             const banner = document.getElementById('cookie-consent-banner');
-
-            if (banner) {
-                banner.style.display = 'none';
-            }
+            if (banner) banner.style.display = 'none';
         }
 
         function showCookieBanner() {
             const banner = document.getElementById('cookie-consent-banner');
-
-            if (banner) {
-                banner.style.display = 'block';
-            }
+            if (banner) banner.style.display = 'block';
         }
 
         function hasAnalyticsConsent() {
@@ -270,17 +237,11 @@
         }
 
         function trackEvent(eventName, params = {}) {
-            if (
-                hasAnalyticsConsent() &&
-                typeof gtag === 'function'
-            ) {
+            if (hasAnalyticsConsent() && typeof gtag === 'function') {
                 gtag('event', eventName, params);
             }
 
-            if (
-                hasAnalyticsConsent() &&
-                typeof clarity === 'function'
-            ) {
+            if (hasAnalyticsConsent() && typeof clarity === 'function') {
                 clarity('event', eventName);
             }
         }
@@ -301,10 +262,7 @@
                 return;
             }
 
-            if (
-                savedConsent === 'necessary' ||
-                savedConsent === 'rejected'
-            ) {
+            if (savedConsent === 'necessary' || savedConsent === 'rejected') {
                 return;
             }
 
@@ -316,7 +274,7 @@
 <body class="bg-gray-50">
 
     <header class="bg-white border-b border-gray-200 py-4">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" aria-label="RootedField home">
                 <img
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png"
@@ -333,33 +291,27 @@
     </header>
 
     <main>
-        <section class="py-20 px-6 text-center">
-            <div class="max-w-4xl mx-auto">
-                <img
-    src="logo_only.png"
-    alt="RootedField Logo"
-    class="h-72 mx-auto mb-8"
-/>
-                <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-6">
-                    Free 14-day trial • No credit card required
-                </div>
+        <section class="relative overflow-hidden bg-white">
+            <img
+                src="hero-rootedfield.png"
+                alt="RootedField orchard management software shown on laptop and mobile devices"
+                class="w-full h-auto block"
+            >
 
-                <h1 class="text-5xl font-bold mb-6 text-forest-green">
-                    Orchard Management Software for Better Tree Care
-                </h1>
-
-                <p class="text-xl mb-12 text-stone-gray max-w-2xl mx-auto">
+            <div class="sr-only">
+                <h1>Orchard Management Software for Better Tree Care</h1>
+                <p>
                     RootedField helps orchardists, farmers, and fruit tree growers track tree health,
                     schedule care, manage irrigation, map tree locations, and organize orchard operations.
                 </p>
+            </div>
 
-                <div class="flex justify-center">
-                    <button onclick="startTrial('hero')" class="px-8 py-3 bg-gradient-green text-white rounded font-semibold">
-                        Start Free Trial
-                    </button>
-                </div>
-
-                <p class="text-sm mt-4 text-stone-gray">Start organizing your orchard today</p>
+            <div class="absolute inset-0">
+                <button
+                    onclick="startTrial('hero')"
+                    aria-label="Start Free Trial"
+                    class="absolute left-[69%] top-[65%] h-[7%] w-[17%] rounded-xl"
+                ></button>
             </div>
         </section>
 
