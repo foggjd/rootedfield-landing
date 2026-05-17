@@ -29,12 +29,12 @@
     <meta property="og:description" content="Track individual trees, health records, notes, locations, activity history, and orchard care from one simple platform.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rootedfield.com/tree-management.html">
-    <meta property="og:image" content="https://rootedfield.com/hero-rootedfield.png">
+    <meta property="og:image" content="https://rootedfield.com/tree-management-screenshot.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tree Management Software for Orchards | RootedField">
     <meta name="twitter:description" content="Orchard tree management software for tracking tree health, notes, locations, activity history, and care records.">
-    <meta name="twitter:image" content="https://rootedfield.com/hero-rootedfield.png">
+    <meta name="twitter:image" content="https://rootedfield.com/tree-management-screenshot.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -83,23 +83,34 @@
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" aria-label="RootedField home">
                 <img
-                    src="/tree-management.png"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png"
                     alt="RootedField orchard management software logo"
                     class="h-8"
                 >
             </a>
 
             <nav class="flex gap-4">
-                <a href="index.html" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">Home</a>
-                <a href="pricing.html" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">Pricing</a>
-                <a href="https://app.rootedfield.com" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">Sign In</a>
+                <a href="index.html" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">
+                    Home
+                </a>
+
+                <a href="pricing.html" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">
+                    Pricing
+                </a>
+
+                <a href="https://app.rootedfield.com" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">
+                    Sign In
+                </a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="bg-white py-20 px-6">
-            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+        <!-- HERO -->
+        <section class="bg-white py-20 px-6 overflow-hidden">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
                 <div>
                     <p class="text-md uppercase tracking-[0.25em] text-sage-green font-semibold mb-6 italic">
                         Orchard Tree Management
@@ -110,163 +121,214 @@
                     </h1>
 
                     <p class="text-xl text-stone-gray leading-relaxed mb-8">
-                        RootedField helps growers organize individual tree records, monitor health,
-                        log care activity, manage locations, and build a clear history for every tree
-                        in the orchard.
+                        RootedField helps growers organize individual tree records,
+                        monitor orchard health, log care activity, track watering,
+                        manage locations, and build long-term records for every tree.
                     </p>
 
-                    <button
-                        onclick="startTrial('tree_management_hero')"
-                        class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_70px_rgba(135,169,107,0.9)] active:scale-95"
-                    >
-                        Start Free Trial
-                    </button>
-                </div>
+                    <div class="flex flex-wrap gap-4 mb-10">
+                        <button
+                            onclick="startTrial('tree_management_hero')"
+                            class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_70px_rgba(135,169,107,0.9)] active:scale-95"
+                        >
+                            Start Free Trial
+                        </button>
 
-                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-lg">
-                    <div class="bg-white rounded-xl border border-gray-200 p-5">
-                        <div class="flex items-center justify-between mb-5">
-                            <div>
-                                <div class="text-sm text-stone-gray">Tree Record</div>
-                                <div class="text-2xl font-bold text-forest-green">Apple Tree #2956</div>
+                        <a
+                            href="pricing.html"
+                            class="px-8 py-4 border border-gray-300 rounded-xl font-semibold text-forest-green hover:bg-gray-50 transition-colors duration-300"
+                        >
+                            View Pricing
+                        </a>
+                    </div>
+
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                            <div class="text-2xl font-bold text-forest-green">
+                                Unlimited
                             </div>
 
-                            <span class="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">
-                                Excellent
-                            </span>
-                        </div>
-
-                        <div class="grid sm:grid-cols-2 gap-4 mb-5">
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <div class="text-sm text-stone-gray mb-1">Variety</div>
-                                <div class="font-semibold text-forest-green">Honeycrisp</div>
-                            </div>
-
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <div class="text-sm text-stone-gray mb-1">Location</div>
-                                <div class="font-semibold text-forest-green">North Block</div>
-                            </div>
-
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <div class="text-sm text-stone-gray mb-1">Last Activity</div>
-                                <div class="font-semibold text-forest-green">Watered</div>
-                            </div>
-
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <div class="text-sm text-stone-gray mb-1">Next Task</div>
-                                <div class="font-semibold text-forest-green">Health Check</div>
+                            <div class="text-sm text-stone-gray">
+                                Tree Records
                             </div>
                         </div>
 
-                        <div class="border-t border-gray-200 pt-4">
-                            <div class="text-sm text-stone-gray mb-2">Recent Notes</div>
-                            <p class="text-stone-gray">
-                                Strong spring growth. No visible pest pressure. Check watering schedule
-                                again during next dry period.
-                            </p>
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                            <div class="text-2xl font-bold text-forest-green">
+                                GPS
+                            </div>
+
+                            <div class="text-sm text-stone-gray">
+                                Tree Mapping
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                            <div class="text-2xl font-bold text-forest-green">
+                                Full
+                            </div>
+
+                            <div class="text-sm text-stone-gray">
+                                Activity History
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#87a96b]/20 to-[#4a5d23]/20 rounded-[2rem] blur-3xl"></div>
+
+                    <img
+                        src="tree-management-screenshot.png"
+                        alt="RootedField tree management dashboard"
+                        class="relative z-10 w-full rounded-3xl border border-gray-200 shadow-2xl"
+                    >
+                </div>
+
             </div>
         </section>
 
+        <!-- FEATURES -->
         <section class="py-20 px-6 bg-gray-50">
             <div class="max-w-6xl mx-auto">
+
                 <h2 class="text-3xl font-bold text-center mb-16 text-forest-green">
                     Manage Tree Records Without Spreadsheets
                 </h2>
 
                 <div class="grid md:grid-cols-3 gap-8">
+
                     <div class="p-6 bg-white border border-gray-200 rounded-lg">
-                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">🌳</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Track Individual Trees</h3>
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                            🌳
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-3 text-forest-green">
+                            Track Individual Trees
+                        </h3>
+
                         <p class="text-stone-gray">
-                            Keep records for each tree, including species, variety, ID, planting details,
-                            health status, and notes.
+                            Keep records for each tree, including species,
+                            variety, planting details, health status, notes,
+                            and care history.
                         </p>
                     </div>
 
                     <div class="p-6 bg-white border border-gray-200 rounded-lg">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">💧</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Monitor Care Needs</h3>
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            💧
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-3 text-forest-green">
+                            Monitor Care Needs
+                        </h3>
+
                         <p class="text-stone-gray">
-                            See watering status, overdue care, active tasks, and upcoming maintenance needs
-                            from one organized view.
+                            Track watering schedules, overdue maintenance,
+                            inspections, pruning activity, and orchard care tasks.
                         </p>
                     </div>
 
                     <div class="p-6 bg-white border border-gray-200 rounded-lg">
-                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">📝</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Build Care History</h3>
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                            📝
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-3 text-forest-green">
+                            Build Long-Term Records
+                        </h3>
+
                         <p class="text-stone-gray">
-                            Log inspections, pruning, fertilizing, watering, treatments, observations,
-                            and other orchard activity over time.
+                            Build a complete orchard history across seasons,
+                            treatments, growth, productivity, and observations.
                         </p>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- CONTENT -->
         <section class="py-20 px-6 bg-white">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
                 <div>
                     <h2 class="text-3xl font-bold text-forest-green mb-6">
-                        Know What Is Happening Across Your Orchard
+                        Keep Your Orchard Organized
                     </h2>
 
                     <p class="text-lg text-stone-gray leading-relaxed mb-6">
-                        Whether you manage a few backyard trees or a larger orchard, RootedField gives
-                        you a cleaner way to organize tree details and care records. Instead of relying
-                        on memory, notebooks, or scattered spreadsheets, each tree has a record you can
-                        keep building season after season.
+                        RootedField gives growers a centralized place to manage
+                        orchard records and tree-level details. Instead of relying
+                        on memory, spreadsheets, or notebooks, every tree can have
+                        its own organized history.
                     </p>
 
                     <p class="text-lg text-stone-gray leading-relaxed">
-                        Use tree records to understand what was planted, where it is located, how it is
-                        performing, what care it has received, and what needs attention next.
+                        Track what was planted, where it is located, how it is
+                        performing, what care it has received, and what needs
+                        attention next.
                     </p>
                 </div>
 
                 <div class="grid gap-4">
+
                     <div class="p-5 border border-gray-200 rounded-lg bg-gray-50">
-                        <h3 class="font-semibold text-forest-green mb-2">Health Monitoring</h3>
+                        <h3 class="font-semibold text-forest-green mb-2">
+                            Health Monitoring
+                        </h3>
+
                         <p class="text-stone-gray">
-                            Track health status and observations so issues are easier to spot over time.
+                            Track health status and orchard observations over time.
                         </p>
                     </div>
 
                     <div class="p-5 border border-gray-200 rounded-lg bg-gray-50">
-                        <h3 class="font-semibold text-forest-green mb-2">Location Organization</h3>
+                        <h3 class="font-semibold text-forest-green mb-2">
+                            Location Organization
+                        </h3>
+
                         <p class="text-stone-gray">
-                            Organize trees by orchard, block, row, field, or custom location details.
+                            Organize trees by orchard, field, block, row, or custom locations.
                         </p>
                     </div>
 
                     <div class="p-5 border border-gray-200 rounded-lg bg-gray-50">
-                        <h3 class="font-semibold text-forest-green mb-2">Task Visibility</h3>
+                        <h3 class="font-semibold text-forest-green mb-2">
+                            Task Visibility
+                        </h3>
+
                         <p class="text-stone-gray">
-                            Keep active tree care tasks visible so important work does not get missed.
+                            Keep active tree care tasks visible and organized.
                         </p>
                     </div>
 
                     <div class="p-5 border border-gray-200 rounded-lg bg-gray-50">
-                        <h3 class="font-semibold text-forest-green mb-2">Long-Term Records</h3>
+                        <h3 class="font-semibold text-forest-green mb-2">
+                            Orchard History
+                        </h3>
+
                         <p class="text-stone-gray">
-                            Build a history of planting, care, health, productivity, and maintenance.
+                            Build a long-term record of orchard care and tree performance.
                         </p>
                     </div>
+
                 </div>
+
             </div>
         </section>
 
+        <!-- CTA -->
         <section class="py-20 px-6 bg-gray-50">
             <div class="max-w-4xl mx-auto text-center">
+
                 <h2 class="text-3xl font-bold mb-6 text-forest-green">
                     Better Tree Records Start Here
                 </h2>
 
                 <p class="text-xl mb-8 text-stone-gray">
-                    Start your free 14-day trial and bring your orchard records into one simple platform.
+                    Start your free 14-day trial and bring your orchard records
+                    into one simple platform.
                 </p>
 
                 <button
@@ -275,12 +337,15 @@
                 >
                     Start Free Trial
                 </button>
+
             </div>
         </section>
+
     </main>
 
     <footer class="border-t bg-gray-100 py-8 px-6">
         <div class="max-w-6xl mx-auto flex flex-col items-center gap-6">
+
             <img
                 src="footer-rootedfield.png"
                 alt="RootedField logo"
@@ -288,17 +353,34 @@
             >
 
             <div class="flex flex-wrap items-center justify-center gap-5 text-sm">
-                <a href="privacy.html" class="text-stone-gray hover:underline">Privacy Policy</a>
-                <a href="terms.html" class="text-stone-gray hover:underline">Terms of Service</a>
-                <a href="https://rootedfield.featurebase.app/changelog" target="_blank" rel="noopener noreferrer" class="text-stone-gray hover:underline">Changelog</a>
-                <a href="sitemap.xml" class="text-stone-gray hover:underline">Sitemap</a>
-                <a href="mailto:support@rootedfield.com" class="text-stone-gray hover:underline">Contact Us</a>
+
+                <a href="privacy.html" class="text-stone-gray hover:underline">
+                    Privacy Policy
+                </a>
+
+                <a href="terms.html" class="text-stone-gray hover:underline">
+                    Terms of Service
+                </a>
+
+                <a href="https://rootedfield.featurebase.app/changelog" target="_blank" rel="noopener noreferrer" class="text-stone-gray hover:underline">
+                    Changelog
+                </a>
+
+                <a href="sitemap.xml" class="text-stone-gray hover:underline">
+                    Sitemap
+                </a>
+
+                <a href="mailto:support@rootedfield.com" class="text-stone-gray hover:underline">
+                    Contact Us
+                </a>
 
                 <span class="text-stone-gray">
                     © <script>document.write(new Date().getFullYear())</script> RootedField. All rights reserved.
                 </span>
+
             </div>
         </div>
     </footer>
+
 </body>
 </html>
