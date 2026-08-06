@@ -1,566 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RootedField | Orchard Management Software for Tree Tracking, Irrigation & Farm Operations</title>
+  <meta name="description" content="RootedField is orchard management software for tracking trees, managing irrigation schedules, logging orchard activities, mapping tree locations, and organizing farm operations.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1e3a2e">
+  <link rel="canonical" href="https://rootedfield.com/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:title" content="RootedField | Your orchard. All in one place.">
+  <meta property="og:description" content="Track every tree, schedule care, map your orchard, and record field work in one simple platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rootedfield.com/">
+  <meta property="og:image" content="https://rootedfield.com/hero-rootedfield.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RootedField | Orchard Management Software">
+  <meta name="twitter:description" content="Your trees, field work, schedules, and orchard history in one place.">
+  <meta name="twitter:image" content="https://rootedfield.com/hero-rootedfield.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"RootedField","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://rootedfield.com/","description":"Orchard management software for tracking trees, irrigation schedules, activities, maps, and farm operations.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free plan and 14-day paid-plan trial available."}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"RootedField","url":"https://rootedfield.com/","logo":"https://rootedfield.com/logo_only.png","contactPoint":{"@type":"ContactPoint","email":"support@rootedfield.com","contactType":"customer support"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does setup take?","acceptedAnswer":{"@type":"Answer","text":"You can create an orchard and begin adding trees in minutes."}},{"@type":"Question","name":"Can RootedField track individual trees?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each tree can have its own health, location, activity, note, and growth record."}},{"@type":"Question","name":"Does RootedField work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. RootedField is web-based and designed to work on phones, tablets, and desktop computers."}},{"@type":"Question","name":"Can multiple people work in the same orchard?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pro and Team Pro include team management, with included seats varying by plan."}},{"@type":"Question","name":"Is there a free trial?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paid plans include a 14-day free trial with no credit card required."}}]}
+  </script>
 
-    <title>RootedField | Orchard Management Software for Tree Tracking, Irrigation & Farm Operations</title>
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-
-    <meta name="theme-color" content="#87a96b">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
-    <meta
-        name="description"
-        content="RootedField is orchard management software for tracking trees, managing irrigation schedules, logging orchard activities, mapping tree locations, and organizing farm operations."
-    >
-
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://rootedfield.com/">
-
-    <meta property="og:title" content="RootedField | Orchard Management Software">
-    <meta property="og:description" content="Track trees, schedule care, manage irrigation, map orchards, and organize farm operations from one simple platform.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rootedfield.com/">
-    <meta property="og:image" content="https://rootedfield.com/hero-rootedfield.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RootedField | Orchard Management Software">
-    <meta name="twitter:description" content="Orchard management software for tree tracking, irrigation planning, activity logging, GPS mapping, and farm operations.">
-    <meta name="twitter:image" content="https://rootedfield.com/hero-rootedfield.png">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        :root {
-            --forest-green: #1e3a2e;
-            --sage-green: #87a96b;
-            --moss-green: #4a5d23;
-            --stone-gray: #78716c;
-        }
-
-        .text-forest-green { color: var(--forest-green); }
-        .text-sage-green { color: var(--sage-green); }
-        .text-stone-gray { color: var(--stone-gray); }
-        .bg-sage-green { background-color: var(--sage-green); }
-        .bg-gradient-green { background: linear-gradient(135deg, var(--sage-green), var(--moss-green)); }
-
-        .hero-bg {
-            background-image: url('hero-rootedfield.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "RootedField",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "url": "https://rootedfield.com/",
-        "description": "RootedField is orchard management software for tracking trees, managing irrigation schedules, logging orchard activities, mapping tree locations, and organizing farm operations.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "description": "Free 14-day trial available."
-        }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "RootedField",
-        "url": "https://rootedfield.com/",
-        "logo": "https://rootedfield.com/logo_only.png",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "support@rootedfield.com",
-            "contactType": "customer support"
-        }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is RootedField?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "RootedField is orchard management software that helps growers track trees, manage care schedules, monitor watering, map orchard layouts, and organize farm operations."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can RootedField track individual trees?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. RootedField allows users to track individual trees with records for health, location, activities, notes, and growth history."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does RootedField support irrigation scheduling?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. RootedField includes watering and irrigation scheduling tools to help growers plan and manage tree care."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Who is RootedField built for?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "RootedField is built for orchardists, farmers, homesteaders, backyard growers, and teams managing fruit trees or orchard operations."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <script>
-        const GA_MEASUREMENT_ID = 'G-RL48W4WSTP';
-        const CLARITY_PROJECT_ID = 'wq7iy6zgoy';
-        const CONSENT_STORAGE_KEY = 'rootedfield_cookie_consent';
-
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            window.dataLayer.push(arguments);
-        }
-
-        gtag('consent', 'default', {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-        });
-
-        function loadGoogleAnalytics() {
-            if (window.rootedFieldGaLoaded) return;
-
-            window.rootedFieldGaLoaded = true;
-
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-            document.head.appendChild(script);
-
-            gtag('js', new Date());
-
-            gtag('config', GA_MEASUREMENT_ID, {
-                page_path: window.location.pathname,
-                page_location: window.location.href,
-                page_title: document.title
-            });
-        }
-
-        function loadMicrosoftClarity() {
-            if (window.rootedFieldClarityLoaded) return;
-
-            window.rootedFieldClarityLoaded = true;
-
-            (function(c, l, a, r, i, t, y) {
-                c[a] = c[a] || function() {
-                    (c[a].q = c[a].q || []).push(arguments);
-                };
-                t = l.createElement(r);
-                t.async = 1;
-                t.src = "https://www.clarity.ms/tag/" + i;
-                y = l.getElementsByTagName(r)[0];
-                y.parentNode.insertBefore(t, y);
-            })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
-        }
-
-        function acceptAnalytics() {
-            localStorage.setItem(CONSENT_STORAGE_KEY, 'analytics');
-
-            gtag('consent', 'update', {
-                analytics_storage: 'granted',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied'
-            });
-
-            loadGoogleAnalytics();
-            loadMicrosoftClarity();
-            hideCookieBanner();
-        }
-
-        function acceptNecessaryOnly() {
-            localStorage.setItem(CONSENT_STORAGE_KEY, 'necessary');
-
-            gtag('consent', 'update', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied'
-            });
-
-            hideCookieBanner();
-        }
-
-        function rejectCookies() {
-            localStorage.setItem(CONSENT_STORAGE_KEY, 'rejected');
-
-            gtag('consent', 'update', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied'
-            });
-
-            hideCookieBanner();
-        }
-
-        function hideCookieBanner() {
-            const banner = document.getElementById('cookie-consent-banner');
-            if (banner) banner.style.display = 'none';
-        }
-
-        function showCookieBanner() {
-            const banner = document.getElementById('cookie-consent-banner');
-            if (banner) banner.style.display = 'block';
-        }
-
-        function hasAnalyticsConsent() {
-            return localStorage.getItem(CONSENT_STORAGE_KEY) === 'analytics';
-        }
-
-        function trackEvent(eventName, params = {}) {
-            if (hasAnalyticsConsent() && typeof gtag === 'function') {
-                gtag('event', eventName, params);
-            }
-
-            if (hasAnalyticsConsent() && typeof clarity === 'function') {
-                clarity('event', eventName);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const savedConsent = localStorage.getItem(CONSENT_STORAGE_KEY);
-
-            if (savedConsent === 'analytics') {
-                gtag('consent', 'update', {
-                    analytics_storage: 'granted',
-                    ad_storage: 'denied',
-                    ad_user_data: 'denied',
-                    ad_personalization: 'denied'
-                });
-
-                loadGoogleAnalytics();
-                loadMicrosoftClarity();
-                return;
-            }
-
-            if (savedConsent === 'necessary' || savedConsent === 'rejected') {
-                return;
-            }
-
-            showCookieBanner();
-        });
-    </script>
+  <script>
+    const GA_MEASUREMENT_ID = 'G-RL48W4WSTP';
+    const CLARITY_PROJECT_ID = 'wq7iy6zgoy';
+    const CONSENT_STORAGE_KEY = 'rootedfield_cookie_consent';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    function loadGoogleAnalytics(){if(window.rootedFieldGaLoaded)return;window.rootedFieldGaLoaded=true;const s=document.createElement('script');s.async=true;s.src=`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_MEASUREMENT_ID,{page_path:location.pathname,page_location:location.href,page_title:document.title});}
+    function loadMicrosoftClarity(){if(window.rootedFieldClarityLoaded)return;window.rootedFieldClarityLoaded=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,'clarity','script',CLARITY_PROJECT_ID);}
+    function hideCookieBanner(){const b=document.getElementById('cookie-consent-banner');if(b)b.hidden=true;}
+    function acceptAnalytics(){localStorage.setItem(CONSENT_STORAGE_KEY,'analytics');gtag('consent','update',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});loadGoogleAnalytics();loadMicrosoftClarity();hideCookieBanner();}
+    function acceptNecessaryOnly(){localStorage.setItem(CONSENT_STORAGE_KEY,'necessary');hideCookieBanner();}
+    function rejectCookies(){localStorage.setItem(CONSENT_STORAGE_KEY,'rejected');hideCookieBanner();}
+    function hasAnalyticsConsent(){return localStorage.getItem(CONSENT_STORAGE_KEY)==='analytics';}
+    function trackEvent(name,params={}){if(hasAnalyticsConsent()){gtag('event',name,params);if(typeof clarity==='function')clarity('event',name);}}
+    document.addEventListener('DOMContentLoaded',()=>{const c=localStorage.getItem(CONSENT_STORAGE_KEY);if(c==='analytics'){gtag('consent','update',{analytics_storage:'granted'});loadGoogleAnalytics();loadMicrosoftClarity();}else if(!c){document.getElementById('cookie-consent-banner').hidden=false;}});
+  </script>
 </head>
-
-<body class="bg-gray-50">
-    <header class="bg-white border-b border-gray-200 py-4">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" aria-label="RootedField home">
-                <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d063e7071a6d85535b506a/de0af3bfa_full_logo_long.png"
-                    alt="RootedField orchard management software logo"
-                    class="h-8"
-                >
-            </a>
-
-            <nav class="flex gap-4">
-                <a href="pricing.html" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">Pricing</a>
-                <a href="https://rootedfield.featurebase.app/roadmap" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">Roadmap</a>
-                <a href="https://app.rootedfield.com" class="px-4 py-2 text-stone-gray hover:bg-[#e8f3df] hover:text-[#1e3a2e] rounded transition-colors duration-300">Sign In</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="bg-white overflow-hidden">
-            <div class="lg:hidden px-6 pt-12 pb-16 text-center">
-                <img
-                    src="logo_only.png"
-                    alt="RootedField Logo"
-                    class="h-40 mx-auto mb-6"
-                >
-
-                <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-5">
-                    Free 14-day trial • No credit card required
-                </div>
-
-                <h1 class="text-4xl font-bold text-forest-green leading-tight mb-6">
-                    Track Every Tree. Manage Every Season.
-                </h1>
-
-                <button
-                    onclick="startTrial('hero_mobile')"
-                    class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_70px_rgba(135,169,107,0.9)] active:scale-95"
-                >
-                    Start Free Trial
-                </button>
-
-                <img
-                    src="hero-rootedfield.png"
-                    alt="RootedField shown on laptop and mobile devices in an orchard"
-                    class="mt-12 w-full max-w-xl mx-auto rounded-2xl shadow-lg"
-                >
-            </div>
-
-            <div class="hidden lg:block hero-bg relative min-h-[760px] overflow-hidden">
-                <div class="mx-auto grid min-h-[760px] max-w-7xl grid-cols-2 items-center gap-32 px-6">
-                    <div></div>
-
-                    <div class="relative z-10 flex flex-col items-center text-center">
-                        <img
-                            src="logo_only.png"
-                            alt="RootedField Logo"
-                            class="h-80 mb-8"
-                        >
-
-                        <div class="inline-block bg-sage-green text-white text-sm px-4 py-1 rounded-full mb-6">
-                            Free 14-day trial • No credit card required
-                        </div>
-
-                        <h1 class="text-5xl font-bold leading-tight text-white mb-8">
-                            Track Every Tree. Manage Every Season.
-                        </h1>
-
-                        <button
-                            onclick="startTrial('hero')"
-                            class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_70px_rgba(135,169,107,0.9)] active:scale-95"
-                        >
-                            Start Free Trial
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-6 bg-white">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <p class="text-md uppercase tracking-[0.25em] text-sage-green font-semibold mb-8 italic">
-                        Built by growers, for growers
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-forest-green">
-                        Everything you need to manage your orchard
-                    </h2>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <a
-                        href="tree-management.html"
-                        onclick="trackEvent('feature_card_click', { feature: 'tree_management' })"
-                        class="block p-6 border border-gray-200 rounded-lg hover:border-[#87a96b] hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">🌳</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Tree Management</h3>
-                        <p class="text-stone-gray">Track unlimited trees with detailed health monitoring, location data, notes, and growth records.</p>
-                    </a>
-
-                    <a
-                        href="orchard-irrigation-management.html"
-                        onclick="trackEvent('feature_card_click', { feature: 'irrigation_scheduling' })"
-                        class="block p-6 border border-gray-200 rounded-lg hover:border-[#87a96b] hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">💧</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Irrigation Scheduling</h3>
-                        <p class="text-stone-gray">Plan watering schedules, monitor care activity, and keep young trees on track through dry periods.</p>
-                    </a>
-
-                    <a
-                        href="farm-field-activity-tracking.html"
-                        onclick="trackEvent('feature_card_click', { feature: 'activity_tracking' })"
-                        class="block p-6 border border-gray-200 rounded-lg hover:border-[#87a96b] hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">📅</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Activity Tracking</h3>
-                        <p class="text-stone-gray">Log pruning, fertilizing, spraying, inspections, harvests, and orchard maintenance activities.</p>
-                    </a>
-
-                    <div class="p-6 border border-gray-200 rounded-lg">
-                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">📍</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">GPS Orchard Mapping</h3>
-                        <p class="text-stone-gray">Use interactive maps to organize tree locations, rows, blocks, and orchard layouts.</p>
-                    </div>
-
-                    <div class="p-6 border border-gray-200 rounded-lg">
-                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">📊</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Analytics & Reports</h3>
-                        <p class="text-stone-gray">Understand tree health, orchard productivity, care history, and long-term performance.</p>
-                    </div>
-
-                    <div class="p-6 border border-gray-200 rounded-lg">
-                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">👥</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Team Collaboration</h3>
-                        <p class="text-stone-gray">Share orchard records with team members and manage access across your operation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-6 bg-gray-50">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-16 text-forest-green">Built for every kind of grower</h2>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-6 bg-white border border-gray-200 rounded-lg">
-                        <div class="text-3xl mb-4">🍎</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Commercial Orchards</h3>
-                        <p class="text-stone-gray">Keep tree records, care schedules, harvest notes, and orchard activity organized across larger plantings.</p>
-                    </div>
-
-                    <div class="p-6 bg-white border border-gray-200 rounded-lg">
-                        <div class="text-3xl mb-4">🏡</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Backyard Growers</h3>
-                        <p class="text-stone-gray">Track your fruit trees, remember care tasks, and build a better history of what works season after season.</p>
-                    </div>
-
-                    <div class="p-6 bg-white border border-gray-200 rounded-lg">
-                        <div class="text-3xl mb-4">🌱</div>
-                        <h3 class="text-xl font-semibold mb-3 text-forest-green">Small Farms & Homesteads</h3>
-                        <p class="text-stone-gray">Manage mixed plantings, tree locations, notes, and recurring maintenance in one simple platform.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-6 bg-white">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-12 text-forest-green">
-                    Orchard Management FAQ
-                </h2>
-
-                <div class="space-y-6">
-                    <div class="border border-gray-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-forest-green mb-2">What is RootedField?</h3>
-                        <p class="text-stone-gray">RootedField is orchard management software that helps growers track trees, manage care schedules, monitor watering, map orchard layouts, and organize farm operations.</p>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-forest-green mb-2">Can RootedField track individual trees?</h3>
-                        <p class="text-stone-gray">Yes. RootedField allows users to track individual trees with records for health, location, activities, notes, and growth history.</p>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-forest-green mb-2">Does RootedField support irrigation scheduling?</h3>
-                        <p class="text-stone-gray">Yes. RootedField includes watering and irrigation scheduling tools to help growers plan and manage tree care.</p>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-lg p-6">
-                        <h3 class="text-xl font-semibold text-forest-green mb-2">Who is RootedField built for?</h3>
-                        <p class="text-stone-gray">RootedField is built for orchardists, farmers, homesteaders, backyard growers, and teams managing fruit trees or orchard operations.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-6 bg-white text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-6 text-forest-green">Ready to transform your orchard?</h2>
-                <p class="text-xl mb-8 text-stone-gray">Start your free 14-day trial today. No credit card required.</p>
-
-                <div class="flex justify-center">
-                    <button
-                        onclick="startTrial('final_cta')"
-                        class="px-10 py-4 bg-gradient-green text-white rounded-xl font-semibold text-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_70px_rgba(135,169,107,0.9)] active:scale-95"
-                    >
-                        Start Free Trial
-                    </button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="border-t bg-gray-100 py-8 px-6">
-        <div class="max-w-6xl mx-auto flex flex-col items-center gap-6">
-            <img
-                src="footer-rootedfield.png"
-                alt="RootedField logo"
-                class="h-32"
-            >
-
-            <div class="flex flex-wrap items-center justify-center gap-5 text-sm">
-                <a href="privacy.html" class="text-stone-gray hover:underline">Privacy Policy</a>
-                <a href="terms.html" class="text-stone-gray hover:underline">Terms of Service</a>
-                <a href="https://rootedfield.featurebase.app/changelog" target="_blank" rel="noopener noreferrer" class="text-stone-gray hover:underline">Changelog</a>
-                <a href="sitemap.xml" class="text-stone-gray hover:underline">Sitemap</a>
-                <a href="mailto:support@rootedfield.com" class="text-stone-gray hover:underline">Contact Us</a>
-
-                <span class="text-stone-gray">
-                    © <script>document.write(new Date().getFullYear())</script> RootedField. All rights reserved.
-                </span>
-            </div>
-        </div>
-    </footer>
-
-    <div
-        id="cookie-consent-banner"
-        style="display: none;"
-        class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white px-6 py-5 shadow-lg"
-    >
-        <div class="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div class="max-w-3xl">
-                <h2 class="text-lg font-semibold text-forest-green">
-                    Cookie Preferences
-                </h2>
-
-                <p class="mt-1 text-sm text-stone-gray">
-                    RootedField uses necessary cookies to operate the site.
-                    With your permission, we also use analytics cookies to understand site usage and improve the platform.
-                </p>
-            </div>
-
-            <div class="flex flex-col gap-2 sm:flex-row">
-                <button onclick="acceptAnalytics()" class="rounded bg-gradient-green px-4 py-2 text-sm font-semibold text-white">
-                    Accept
-                </button>
-
-                <button onclick="acceptNecessaryOnly()" class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50">
-                    Necessary Only
-                </button>
-
-                <button onclick="rejectCookies()" class="rounded border border-gray-300 px-4 py-2 text-sm font-semibold text-stone-gray hover:bg-gray-50">
-                    Reject
-                </button>
-            </div>
-        </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="RootedField home">
+        <img src="logo_only.png" alt=""><span>RootedField</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a><a href="pricing.html">Pricing</a><a href="https://rootedfield.featurebase.app/changelog" target="_blank" rel="noopener noreferrer">Resources</a><a href="#about">About</a>
+      </nav>
+      <div class="header-actions"><a class="login-link" href="https://app.rootedfield.com">Log in</a><a class="button button-small" href="https://app.rootedfield.com/signup?trial=true" data-cta="header">Start free for 14 days</a></div>
     </div>
+  </header>
 
-    <script>
-        function startTrial(ctaLocation) {
-            trackEvent('start_trial_click', {
-                page_path: window.location.pathname,
-                page_location: window.location.href,
-                page_title: document.title,
-                cta_location: ctaLocation
-            });
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Orchard management, without the spreadsheets</p>
+          <h1>Your orchard.<br>All in one place.</h1>
+          <p class="lede">Track every tree, schedule care, map your orchard, record field work, and see what’s happening across your operation.</p>
+          <div class="button-row"><a class="button" href="https://app.rootedfield.com/signup?trial=true" data-cta="hero">Start free for 14 days</a><a class="text-link" href="#features">See how it works <span aria-hidden="true">→</span></a></div>
+          <ul class="proof-list" aria-label="Trial details"><li>No credit card required</li><li>Free plan available</li><li>Works on any device</li></ul>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrap"><img src="hero-orchard.jpg" alt="Rows of apple trees in a sunlit orchard beneath green mountains" width="1536" height="1024"></div>
+        </div>
+      </div>
+    </section>
 
-            window.location.href = 'https://app.rootedfield.com/signup?trial=true';
-        }
-    </script>
+    <section class="capabilities" aria-label="Product capabilities">
+      <div class="shell capability-row">
+        <a href="#tree-management"><svg aria-hidden="true"><use href="#icon-tree"/></svg><span><small>Know every tree</small>Tree Management</span></a>
+        <a href="#mapping"><svg aria-hidden="true"><use href="#icon-pin"/></svg><span><small>See your orchard</small>GPS Mapping</span></a>
+        <a href="#irrigation"><svg aria-hidden="true"><use href="#icon-drop"/></svg><span><small>Never miss a watering</small>Irrigation</span></a>
+        <a href="#activity"><svg aria-hidden="true"><use href="#icon-check"/></svg><span><small>Remember every job</small>Activity Tracking</span></a>
+        <a href="#pricing"><svg aria-hidden="true"><use href="#icon-team"/></svg><span><small>Work together</small>Team Collaboration</span></a>
+      </div>
+    </section>
+
+    <section id="features" class="product-story">
+      <article id="tree-management" class="feature feature-warm">
+        <div class="shell feature-grid visual-first">
+          <div class="screenshot-frame screenshot-trees"><img src="tree-management.png" alt="RootedField tree management screen with orchard filters, tree records, health status, and watering dates" loading="lazy" width="2710" height="1312"></div>
+          <div class="feature-copy"><span class="section-number">01</span><h2>Know every tree.</h2><p>Record varieties, planting details, health, growth, notes and care history. Search and filter your orchard, then open the record you need without digging through a spreadsheet.</p><a class="text-link" href="tree-management.html">Explore tree management <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+      <article id="mapping" class="feature feature-pale">
+        <div class="shell feature-grid">
+          <div class="feature-copy"><span class="section-number">02</span><h2>See your orchard.</h2><p>Map individual trees, rows and fields so your digital orchard matches the one outside—and the right record is always close at hand.</p><ol class="mini-flow"><li>Find a tree</li><li>Open its record</li><li>Log work</li><li>Done</li></ol></div>
+          <div class="map-visual"><img src="hero-rootedfield.png" alt="RootedField orchard dashboard with a mapped tree location" loading="lazy" width="1536" height="1024"><div class="map-caption"><span>GPS orchard mapping</span><strong>Every tree, right where you left it.</strong></div></div>
+        </div>
+      </article>
+      <article id="activity" class="feature">
+        <div class="shell feature-grid visual-first">
+          <div class="screenshot-frame screenshot-activity"><img src="farm-field-activity-tracking.png" alt="RootedField activity log showing watering, harvest, observation, and health-check records" loading="lazy" width="2398" height="1084"></div>
+          <div class="feature-copy"><span class="section-number">03</span><h2>Never wonder<br>what happened.</h2><p>Watering. Fertilizing. Pruning. Spraying. Inspections. Harvests. Keep the details somewhere more useful than your memory.</p><a class="text-link" href="farm-field-activity-tracking.html">Explore activity tracking <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+      <article id="irrigation" class="feature feature-pale">
+        <div class="shell feature-grid">
+          <div class="feature-copy"><span class="section-number">04</span><h2>Stay ahead of watering.</h2><p>Smart scheduling helps you water the right trees at the right time—so nothing gets missed.</p><p class="quiet-emphasis">Stop trying to remember who got watered.</p><a class="text-link" href="orchard-irrigation-management.html">Explore irrigation tools <span aria-hidden="true">→</span></a></div>
+          <div class="screenshot-frame screenshot-water"><img src="orchard-irrigation-management.png" alt="RootedField watering schedule with last-watered date, overdue status, seasonal guidance, and automatic scheduling" loading="lazy" width="2028" height="1132"></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="how-it-works">
+      <div class="shell"><div class="section-heading"><p class="eyebrow">How it works</p><h2>Up and running in minutes.</h2></div>
+        <ol class="steps"><li><span class="step-icon"><svg aria-hidden="true"><use href="#icon-orchard"/></svg></span><div><span class="step-number">1</span><h3>Create your orchard</h3><p>Add your property and basic details.</p></div></li><li><span class="step-icon"><svg aria-hidden="true"><use href="#icon-tree"/></svg></span><div><span class="step-number">2</span><h3>Add your trees</h3><p>Build the tree records that match your orchard.</p></div></li><li><span class="step-icon"><svg aria-hidden="true"><use href="#icon-activity"/></svg></span><div><span class="step-number">3</span><h3>Start tracking</h3><p>Log care, monitor health, and build your history.</p></div></li></ol>
+        <div class="center-cta"><a class="button" href="https://app.rootedfield.com/signup?trial=true" data-cta="how_it_works">Start my orchard <span aria-hidden="true">→</span></a><small>Free for 14 days. No credit card required.</small></div>
+      </div>
+    </section>
+
+    <section id="about" class="scale-section"><div class="scale-overlay"></div><div class="shell scale-content"><p class="eyebrow light">Built for what comes next</p><h2>Built to grow with your orchard.</h2><p>Whether you’re planting your first orchard or managing thousands of trees, RootedField keeps the same simple workflow.</p><div class="scale-count"><span>10 trees</span><i></i><span>100 trees</span><i></i><span>10,000 trees</span></div></div></section>
+
+    <section id="pricing" class="pricing-section"><div class="shell"><div class="section-heading"><p class="eyebrow">Simple pricing</p><h2>Start small. Grow when you’re ready.</h2><p>Choose the plan that fits your orchard today. Upgrade as your operation grows.</p></div>
+      <div class="pricing-grid">
+        <article class="price-card"><p class="plan-name">Free</p><h3>$0<small>/month</small></h3><p>For getting started with a small number of trees.</p><ul><li>Up to 10 trees</li><li>Health and watering logs</li><li>1 included user</li></ul><a class="button button-outline" href="https://app.rootedfield.com" data-cta="pricing_free">Get started</a></article>
+        <article class="price-card featured"><span class="popular">Most popular</span><p class="plan-name">Pro</p><h3>$10<small>/month</small></h3><p>More capacity and the full orchard toolkit.</p><ul><li>Up to 100 trees</li><li>GPS mapping and activity history</li><li>Team management</li></ul><a class="button" href="https://app.rootedfield.com/Pricing" data-cta="pricing_pro">Start 14-day trial</a></article>
+        <article class="price-card"><p class="plan-name">Team Pro</p><h3>$50<small>/month</small></h3><p>For larger orchards and growing teams.</p><ul><li>Unlimited trees</li><li>5 included seats</li><li>Full feature set</li></ul><a class="button button-outline" href="https://app.rootedfield.com/Pricing" data-cta="pricing_team">Start 14-day trial</a></article>
+      </div><p class="pricing-note">Paid plans include a 14-day free trial. <a href="pricing.html">See full plan details</a></p></div>
+    </section>
+
+    <section class="faq-section"><div class="shell faq-grid"><div><p class="eyebrow">Questions, answered</p><h2>A simple start for a better-run orchard.</h2><p class="faq-intro">Still curious? <a href="mailto:support@rootedfield.com">Talk to us.</a></p></div><div class="faq-list">
+      <details><summary>How long does setup take?</summary><p>You can create your orchard and begin adding tree records in minutes. Start with the trees you need most, then build from there.</p></details>
+      <details><summary>Can I manage individual trees and orchard areas?</summary><p>Yes. RootedField supports individual tree records, GPS locations, fields, health information, notes, and care history.</p></details>
+      <details><summary>Does RootedField work on mobile?</summary><p>Yes. RootedField is web-based and designed to work on phones, tablets, and desktop computers.</p></details>
+      <details><summary>Can multiple people work in the same orchard?</summary><p>Yes. Team management is available on paid plans. Pro includes one seat, while Team Pro includes five; additional users are available for either plan.</p></details>
+      <details><summary>Is there a free trial? Do I need a credit card?</summary><p>Paid plans include a 14-day free trial, and no credit card is required to get started. A Free plan is also available.</p></details>
+    </div></div></section>
+
+    <section class="final-cta"><div class="shell final-cta-inner"><div><p class="eyebrow light">Leave the spreadsheet behind</p><h2>Your orchard deserves better than a spreadsheet.</h2><p>Put your trees, field work, schedules, and orchard history in one place.</p></div><div><a class="button button-light" href="https://app.rootedfield.com/signup?trial=true" data-cta="final">Start my orchard <span aria-hidden="true">→</span></a><small>Free for 14 days. No credit card required.</small></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand footer-brand" href="index.html"><img src="logo_only.png" alt=""><span>RootedField</span></a><p>Modern orchard management for people who work outside.</p></div><nav aria-label="Footer navigation"><a href="pricing.html">Pricing</a><a href="tree-management.html">Tree management</a><a href="orchard-irrigation-management.html">Irrigation</a><a href="farm-field-activity-tracking.html">Activities</a></nav><nav aria-label="Legal and support"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://rootedfield.featurebase.app/roadmap" target="_blank" rel="noopener noreferrer">Roadmap</a><a href="mailto:support@rootedfield.com">Contact</a></nav></div><div class="shell footer-bottom"><span>© <span id="year"></span> RootedField</span><span>Grow with clarity.</span></div></footer>
+
+  <div id="cookie-consent-banner" class="cookie-banner" hidden><div><strong>Cookie preferences</strong><p>We use necessary cookies to operate the site. With permission, analytics help us improve RootedField.</p></div><div class="cookie-actions"><button onclick="acceptAnalytics()">Accept analytics</button><button onclick="acceptNecessaryOnly()">Necessary only</button><button onclick="rejectCookies()">Reject</button></div></div>
+
+  <svg class="svg-sprite" aria-hidden="true"><defs>
+    <symbol id="icon-tree" viewBox="0 0 32 32"><path d="M16 28V15m0 5-5-5m5 1 5-5M9 18a7 7 0 1 1 12.9-3.8A6 6 0 1 1 16 24H9a6 6 0 0 1 0-12h.3"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 32 32"><path d="M25 14c0 7-9 15-9 15S7 21 7 14a9 9 0 1 1 18 0Z"/><circle cx="16" cy="14" r="3"/></symbol>
+    <symbol id="icon-drop" viewBox="0 0 32 32"><path d="M16 3S8 13 8 20a8 8 0 0 0 16 0c0-7-8-17-8-17Z"/><path d="M12 21a4 4 0 0 0 4 4"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 32 32"><rect x="6" y="7" width="20" height="21" rx="2"/><path d="M11 7V4m10 3V4M11 17l3 3 7-7"/></symbol>
+    <symbol id="icon-team" viewBox="0 0 32 32"><circle cx="12" cy="10" r="5"/><circle cx="23" cy="12" r="4"/><path d="M2 28c0-6 4-10 10-10s10 4 10 10m0-9c5 0 8 3 8 8"/></symbol>
+    <symbol id="icon-orchard" viewBox="0 0 32 32"><path d="M3 27h26M8 27V16m16 11V16M8 20l-4-4m4 1 4-5m12 8-4-4m4 1 4-5M8 14a5 5 0 1 1 4.6-3M24 14a5 5 0 1 1 4.6-3"/></symbol>
+    <symbol id="icon-activity" viewBox="0 0 32 32"><path d="M5 16h5l3-7 5 15 4-8h5"/></symbol>
+  </defs></svg>
+  <script src="script.js"></script>
 </body>
 </html>
