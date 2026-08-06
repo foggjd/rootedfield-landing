@@ -1,0 +1,124 @@
+/* Editorial product imagery: alternate contextual crops with structured, flat modules. */
+.composition-editorial,
+.composition-modular {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.composition-editorial::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: -8% -7% -9% -8%;
+  border-radius: 48% 52% 45% 55% / 55% 43% 57% 45%;
+  background:
+    linear-gradient(122deg, rgba(251, 248, 238, .38), rgba(226, 235, 214, .88)),
+    url("hero-orchard.jpg") center / cover;
+  filter: saturate(.72);
+}
+
+.composition-editorial::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 9% -3% -5% 6%;
+  border: 1px solid rgba(103, 127, 76, .28);
+  background: rgba(250, 248, 239, .78);
+  box-shadow: 0 28px 62px rgba(30, 58, 46, .16);
+  transform: rotate(var(--backing-tilt, -1.8deg));
+}
+
+.composition-editorial img {
+  display: block;
+  border: 1px solid rgba(50, 72, 59, .18);
+  border-radius: 4px;
+  box-shadow: 0 24px 54px rgba(30, 58, 46, .2);
+  transform: rotate(var(--shot-tilt, 1.8deg));
+  transform-origin: center;
+}
+
+.tilt-right { --shot-tilt: 1.8deg; --mobile-shot-tilt: .7deg; --backing-tilt: -1.25deg; }
+.tilt-left { --shot-tilt: -1.55deg; --mobile-shot-tilt: -.6deg; --backing-tilt: 1.15deg; }
+.tilt-soft-right { --shot-tilt: .9deg; --mobile-shot-tilt: .35deg; --backing-tilt: -1.7deg; }
+.tilt-soft-left { --shot-tilt: -.85deg; --mobile-shot-tilt: -.35deg; --backing-tilt: 1.55deg; }
+
+.composition-modular {
+  padding: clamp(18px, 2.4vw, 34px);
+  border-top: 1px solid rgba(92, 117, 68, .55);
+  border-bottom: 1px solid rgba(92, 117, 68, .22);
+  background:
+    linear-gradient(90deg, rgba(229, 237, 218, .88) 0 17%, rgba(247, 246, 238, .96) 17% 100%);
+}
+
+.composition-modular::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 7%;
+  width: 30%;
+  height: 3px;
+  background: var(--olive);
+}
+
+.composition-modular::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  bottom: 8%;
+  width: 42%;
+  height: 28%;
+  z-index: -1;
+  background: #dfe9d2;
+}
+
+.composition-modular img {
+  display: block;
+  border: 1px solid rgba(50, 72, 59, .17);
+  border-radius: 3px;
+  box-shadow: 0 14px 34px rgba(30, 58, 46, .12);
+}
+
+/* Homepage story rhythm. */
+.product-story .composition-editorial { margin: 18px 8px 20px; }
+.product-story .composition-modular { margin-inline: 0 12px; }
+
+/* Feature-page hero variants continue the same alternating visual language. */
+.feature-product-shot.composition-editorial,
+.feature-product-shot.composition-modular {
+  overflow: visible;
+}
+
+.feature-product-shot.composition-editorial img,
+.feature-product-shot.composition-modular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tree-feature .feature-product-shot { margin: 20px 8px; }
+.activity-feature .feature-product-shot { margin: 20px 8px; }
+.irrigation-feature .feature-product-shot { margin-right: 10px; }
+
+@media (max-width: 720px) {
+  .composition-editorial,
+  .product-story .composition-editorial,
+  .tree-feature .feature-product-shot,
+  .activity-feature .feature-product-shot {
+    margin: 12px 4px 18px;
+  }
+
+  .composition-editorial::before { inset: -5% -3% -7%; }
+  .composition-editorial::after { inset: 7% -1% -3% 4%; }
+  .composition-editorial img { transform: rotate(var(--mobile-shot-tilt, .35deg)); }
+  .composition-modular { padding: 15px; }
+  .composition-modular::after { right: -5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .composition-editorial img { transform: none; }
+}
