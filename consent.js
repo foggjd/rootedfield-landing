@@ -30,6 +30,12 @@ function loadGoogleAnalytics() {
   });
 }
 
+// Load GA immediately in Consent Mode. While analytics storage is denied the
+// tag cannot read or write analytics cookies, but it can send cookieless pings
+// that improve aggregate source and conversion modelling. Microsoft Clarity
+// remains fully consent-gated below.
+loadGoogleAnalytics();
+
 function loadMicrosoftClarity() {
   if (window.rootedFieldClarityLoaded) return;
   window.rootedFieldClarityLoaded = true;
