@@ -122,3 +122,23 @@
 @media (prefers-reduced-motion: reduce) {
   .composition-editorial img { transform: none; }
 }
+
+/* Weather demo retains its full frame and loads only when the visitor plays it. */
+.capability-row-weather { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.capability-row-weather a { padding-inline: 10px; gap: 10px; }
+#weather { scroll-margin-top: 96px; }
+.weather-visual { min-width: 0; width: 100%; margin: 0; }
+.weather-visual video { display: block; width: 100%; height: auto; aspect-ratio: 4046 / 2062; background: #fff; }
+.weather-visual figcaption, .weather-transcript { margin-top: 14px; color: #505a55; font-size: 13px; }
+.weather-transcript summary { cursor: pointer; color: var(--forest); font-weight: 700; }
+.weather-highlights { padding-left: 20px; margin: 0 0 22px; color: #505a55; font-size: 15px; }
+.weather-highlights li + li { margin-top: 12px; }
+.weather-highlights strong { color: var(--forest); }
+.feature-copy .weather-note { font-size: 13px; }
+@media (max-width: 980px) {
+  .capability-row-weather { grid-template-columns: repeat(6, 210px); }
+}
+@media (max-width: 720px) {
+  #weather .feature-copy { order: 0; }
+  #weather .weather-visual { order: 1; }
+}
