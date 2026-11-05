@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 946 273" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1,0,0,1,-39.0788,-375.56)">
+<svg width="100%" height="100%" viewBox="0 0 964 293" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-31.0704,-366.386)">
+        <g transform="matrix(2.19974,0,0,1.71774,-605.813,-310.077)">
+            <path d="M727.748,419.416L727.748,538.397C727.748,552.53 718.788,564.004 707.752,564.004L309.524,564.004C298.487,564.004 289.527,552.53 289.527,538.397L289.527,419.416C289.527,405.283 298.487,393.809 309.524,393.809L707.752,393.809C718.788,393.809 727.748,405.283 727.748,419.416Z" style="fill:white;"/>
+        </g>
         <g transform="matrix(2.14696,0,0,1.57395,-580.024,-241.776)">
-            <path d="M727.748,411.178L727.748,546.635C727.748,556.221 722.043,564.004 715.015,564.004L302.261,564.004C295.233,564.004 289.527,556.221 289.527,546.635L289.527,411.178C289.527,401.592 295.233,393.809 302.261,393.809L715.015,393.809C722.043,393.809 727.748,401.592 727.748,411.178Z" style="fill:white;stroke:black;stroke-width:2.66px;"/>
+            <path d="M727.748,419.416L727.748,538.397C727.748,552.53 719.336,564.004 708.975,564.004L308.3,564.004C297.939,564.004 289.527,552.53 289.527,538.397L289.527,419.416C289.527,405.283 297.939,393.809 308.3,393.809L708.975,393.809C719.336,393.809 727.748,405.283 727.748,419.416Z" style="fill:white;stroke:black;stroke-width:2.66px;"/>
         </g>
         <g transform="matrix(0.93308,0,0,0.93308,33.7024,27.8828)">
             <g transform="matrix(1.75725,0,0,1.00764,74.1963,52.3492)">
